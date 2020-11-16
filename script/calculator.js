@@ -4,6 +4,7 @@ function safeEval(str) {
 
 
 const button = document.querySelectorAll('button')
+//on crée un 'button' qui appel tout les ô button de notre generateCalculator
 
 for (let btn of button) {
     btn.addEventListener('click', function () {
@@ -11,7 +12,8 @@ for (let btn of button) {
             input.value += String(btn.textContent);
         } else if (btn.textContent == 'AC') {
             input.value = ' '
-        } else {
+        } 
+            else {
             input.value = safeEval(String(input.value))
         }
 
