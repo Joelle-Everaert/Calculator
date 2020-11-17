@@ -9,18 +9,17 @@ ecran.className = 'ecran';
 
 const e1 = document.createElement('p');
 e1.className = 'e1';
-e1.textContent = '0';
+e1.textContent = '';
 
 const e2 = document.createElement('p')
 e2.className = 'e2';
-e2.textContent = '0';
-console.log(e2)
+e2.textContent = '';
 
-ecran.appendChild(e2);
 ecran.appendChild(e1);
+ecran.appendChild(e2);
 calculator.appendChild(ecran)
 
-console.log(ecran)
+
 for (let i = 0; i < signs.length; i++) {
     const btn = document.createElement('div');
     btn.className = 'btn';
