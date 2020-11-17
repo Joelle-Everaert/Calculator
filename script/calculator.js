@@ -9,23 +9,23 @@ const btn = document.querySelectorAll('.btn')
 for (let b of btn) {
     b.addEventListener('click', function () {
         if (b.textContent !== 'AC' && b.textContent !== '=' && b.textContent !== '%') {
-            // if(e2 == ''){
-            //     e1.textContent += String(b.textContent)
+            // if(resulat == ''){
+            //     calcul.textContent += String(b.textContent)
             // } else {
-            //     e2.textContent = ''
-            //     e1.textContent = String(b.textContent)
+            //     resultat.textContent = ''
+            //     calcul.textContent = String(b.textContent)
             // }
-            e1.textContent += String(b.textContent);//on prend le contenu de mes boutons(b.textContent)
-            e2.textContent += String(b.textContent); 
+            calcul.textContent += String(b.textContent);//on prend le contenu de mes boutons(b.textContent)
+            resulat.textContent += String(b.textContent); 
             
         } else if (b.textContent == '%') { // % avant car si on le met après, n'entre pas dans la boucle !! 
-            e1.textContent += ' % ' + safeEval(String(e2.textContent)) / 100; //On prend la somme pour l'afficher et la / 100
-            e2.textContent = safeEval(String(e2.textContent)) / 100; // juste + car on assigne pas la valeur a nouveau
+            calcul.textContent += ' % ' + safeEval(String(resulat.textContent)) / 100; //On prend la somme pour l'afficher et la / 100
+            resulat.textContent = safeEval(String(resulat.textContent)) / 100; // juste + car on assigne pas la valeur a nouveau
         } else if (b.textContent == 'AC') {
-            e1.textContent = '';
-            e2.textContent = '';
+            calcul.textContent = '';
+            resulat.textContent = '';
         } else if (b.textContent == '=') {
-            e2.textContent = safeEval(String(e2.textContent))
+            resulat.textContent = safeEval(String(resulat.textContent))
         }
     })
 }
@@ -36,7 +36,7 @@ for (let b of btn) {
 document.body.addEventListener('keypress', function (e) {
     console.log(e.code)
     if (e.code == "Enter")
-        e2.textContent = safeEval(String(e2.textContent))
+    resulat.textContent = safeEval(String(resulat.textContent))
 })
 
 

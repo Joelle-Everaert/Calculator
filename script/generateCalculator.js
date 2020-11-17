@@ -7,16 +7,16 @@ calculator.className = 'calculator';
 const ecran = document.createElement('div')
 ecran.className = 'ecran';
 
-const e1 = document.createElement('p');
-e1.className = 'e1';
-e1.textContent = '';
+const calcul = document.createElement('p');
+calcul.className = 'calcul';
+calcul.textContent = '';
 
-const e2 = document.createElement('p')
-e2.className = 'e2';
-e2.textContent = '';
+const resulat = document.createElement('p')
+resulat.className = 'resulat';
+resulat.textContent = '';
 
-ecran.appendChild(e1);
-ecran.appendChild(e2);
+ecran.appendChild(calcul);
+ecran.appendChild(resulat);
 calculator.appendChild(ecran)
 
 
