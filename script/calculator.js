@@ -29,7 +29,6 @@ for (let b of btn) {
         }
     })
 }
-// e2 = ecran du dessous 
 
 //!! faire en sorte que reviens a zero quand on touche = à la fin de son calcule
 
