@@ -30,6 +30,12 @@ for (let i = 0; i < signs.length; i++) {
 const historique= document.createElement('div');
 historique.className ='historique' 
 
+const paraph = document.createElement('p')
+paraph.className = 'paraph'
+
+paraph.innerHTML='Résultat des opérations : '
+
+historique.appendChild(paraph)
 
 document.body.appendChild(calculator)
 document.body.appendChild(historique)

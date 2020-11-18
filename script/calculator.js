@@ -34,7 +34,7 @@ for (let b of btn) {
 
         } else if (b.textContent == '=') {
             resultat.textContent = safeEval(calcul.textContent)
-            historique.innerHTML += calcul.textContent + '=' + resultat.textContent + linebreak;
+            historique.innerHTML += calcul.textContent + ' = ' + resultat.textContent + linebreak;
 
         } else if (b.textContent = '.') {
             if (calcul.textContent.slice(-3).includes(".")==true) {
