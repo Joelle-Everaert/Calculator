@@ -9,7 +9,7 @@ const btn = document.querySelectorAll('.btn')
 
 function pourcentage() {
     return (calcul.textContent / 100)
-}
+}  // creation d'une fonction % qu'on appel dans la condition '%'
 
 for (let b of btn) {
     b.addEventListener('click', function () {
