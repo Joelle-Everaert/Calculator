@@ -11,12 +11,12 @@ const calcul = document.createElement('p');
 calcul.className = 'calcul';
 calcul.textContent = '';
 
-const resulat = document.createElement('p')
-resulat.className = 'resulat';
-resulat.textContent = '';
+const resultat = document.createElement('p')
+resultat.className = 'resultat';
+resultat.textContent = '';
 
 ecran.appendChild(calcul);
-ecran.appendChild(resulat);
+ecran.appendChild(resultat);
 calculator.appendChild(ecran)
 
 
@@ -27,4 +27,9 @@ for (let i = 0; i < signs.length; i++) {
     calculator.appendChild(btn)
 }
 
+const historique= document.createElement('div');
+historique.className ='historique'
+
+
 document.body.appendChild(calculator)
+document.body.appendChild(historique)
