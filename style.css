@@ -27,6 +27,7 @@ body {
     font-size: 30px;
     background-color:black;
     color:white;
+    border: groove;
     
 }
 
@@ -39,6 +40,19 @@ body {
 .resultat {
     font-size: 24px;
 }
+
+.historique{
+    overflow-y : auto;
+    background-color:black;
+    border: 2px solid 333; 
+    box-shadow: 0 0 60px #333;
+    width: 300px;
+    height: 80px;
+    margin: 4px auto 0 auto; 
+    color:white;
+    padding-left: 10px;
+}
+
 
 
 .btn {

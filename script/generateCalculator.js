@@ -28,7 +28,7 @@ for (let i = 0; i < signs.length; i++) {
 }
 
 const historique= document.createElement('div');
-historique.className ='historique'
+historique.className ='historique' 
 
 
 document.body.appendChild(calculator)

@@ -13,7 +13,7 @@ function pourcentage() {
 
 for (let b of btn) {
     b.addEventListener('click', function () {
-        if (b.textContent !== 'AC' && b.textContent !== '=' && b.textContent !== '%') {
+        if (b.textContent !== 'AC' && b.textContent !== '=' && b.textContent !== '%' && b.textContent !== '.') {
             if (resultat.textContent == '') {
                 calcul.textContent += (b.textContent); //si resultat est = a rien alors encode le contenu de mes boutons
             } else {
@@ -25,16 +25,23 @@ for (let b of btn) {
             let pourcent = pourcentage();
             calcul.textContent = calcul.textContent + '%'
             resultat.textContent = pourcent;
+            historique.innerHTML += calcul.textContent + '=' + resultat.textContent + linebreak;
 
         } else if (b.textContent == 'AC') {
             calcul.textContent = '';
             resultat.textContent = '';
-            
+
+
         } else if (b.textContent == '=') {
             resultat.textContent = safeEval(calcul.textContent)
             historique.innerHTML += calcul.textContent + '=' + resultat.textContent + linebreak;
 
-
+        } else if (b.textContent = '.') {
+            if (calcul.textContent.slice(-3).includes(".")==true) {
+                calcul.textContent += "";
+            } else {
+                calcul.textContent += ".";
+            }
         }
     })
 }
@@ -43,5 +50,6 @@ for (let b of btn) {
 document.body.addEventListener('keypress', function (e) {
     console.log(e.code)
     if (e.code == "Enter")
-        resultat.textContent = safeEval(String(resultat.textContent))
+        resultat.textContent = safeEval(calcul.textContent)
+    historique.innerHTML += calcul.textContent + '=' + resultat.textContent + linebreak;
 })
